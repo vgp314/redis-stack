@@ -13,7 +13,7 @@
             <string>daemonize</string>
             <string>no</string>
             <string>port</string>
-            <string>6379</string>
+            <string>443</string>
             <string>loadmodule</string>
             <string>/opt/redis-stack/lib/redisearch.so</string>
             <string>loadmodule</string>

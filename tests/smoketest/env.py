@@ -20,7 +20,7 @@ class DockerTestEnv:
     CONTAINER_NAME - The name to associate with the running container
 
     Optionally classes can implement:
-    PORTMAP - A dictionary of docker port mappings eg: {"6379/tcp": 6379}
+    PORTMAP - A dictionary of docker port mappings eg: {"443/tcp": 443}
     """
 
     HOST_TYPE = "docker"
@@ -35,7 +35,7 @@ class DockerTestEnv:
         except Exception:
             pass
 
-        portmap = getattr(cls, "PORTMAP", {"6379/tcp": 6379})
+        portmap = getattr(cls, "PORTMAP", {"443/tcp": 443})
 
         m = docker.types.Mount("/build", ROOT, read_only=True, type="bind")
         container = cls.env.containers.run(

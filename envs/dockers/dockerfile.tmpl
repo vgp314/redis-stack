@@ -22,9 +22,9 @@ COPY ./etc/scripts/entrypoint.sh /entrypoint.sh
 RUN chmod a+x /entrypoint.sh
 
 {% if docker_type == 'redis-stack-server' %}
-EXPOSE 6379
+EXPOSE 443
 {% elif docker_type == 'redis-stack' %}
-EXPOSE 6379 8001
+EXPOSE 443 8001
 {% endif %}
 
 {% if docker_type == 'redis-stack' %}

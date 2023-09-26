@@ -62,7 +62,7 @@ services:
     container_name: {self.DOCKER_IMAGE}-dockercompose
     image: "redisfab/{self.DOCKER_IMAGE}:{self.VERSION}"
     ports:
-      - 6379:6379
+      - 443:443
 """
         return content
 
@@ -80,7 +80,7 @@ services:
     container_name: {self.DOCKER_IMAGE}-dockercompose
     image: "redisfab/{self.DOCKER_IMAGE}:{self.VERSION}"
     ports:
-      - 6379:6379
+      - 443:443
     environment:
         REDIS_ARGS: "--maxmemory 100mb"
 """
@@ -100,7 +100,7 @@ services:
     container_name: {self.DOCKER_IMAGE}-dockercompose
     image: "redisfab/{self.DOCKER_IMAGE}:{self.VERSION}"
     ports:
-      - 6379:6379
+      - 443:443
     environment:
         REDIS_ARGS: "--maxmemory 100mb"
 """
@@ -120,7 +120,7 @@ services:
     container_name: {self.DOCKER_IMAGE}-dockercompose
     image: "redisfab/{self.DOCKER_IMAGE}:{self.VERSION}"
     ports:
-      - 6379:6379
+      - 443:443
       - 8001:8001
 """
         return content
